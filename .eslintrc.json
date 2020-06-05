@@ -1,15 +1,6 @@
 {
-  // "parser": "@typescript-eslint/parser",
-  // "plugins": ["@typescript-eslint"],
   "extends": [
     "airbnb-typescript"
-    // "eslint:recommended",
-    // "plugin:react/recommended",
-    // "plugin:@typescript-eslint/recommended"
-    // Uncomment the following lines to enable eslint-config-prettier
-    // Is not enabled right now to avoid issues with the Next.js repo
-    // "prettier",
-    // "prettier/@typescript-eslint"
   ],
   "parserOptions": {
     "project": "./tsconfig.json"
@@ -22,6 +13,7 @@
   },
   "rules": {
     "react/react-in-jsx-scope": "off",
-    "react/jsx-one-expression-per-line": "off"
+    "react/jsx-one-expression-per-line": "off",
+    "react/jsx-props-no-spreading": "off"
   }
 }
