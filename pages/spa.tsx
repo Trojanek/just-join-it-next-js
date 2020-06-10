@@ -7,7 +7,7 @@ const JobboardSPA = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const res = await fetch('https://justjoin.it/api/offers');
+      const res = await fetch('/api/offers');
       const json = await res.json();
       setOffers(json);
     };
