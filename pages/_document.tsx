@@ -5,7 +5,7 @@ import Document, {
 import { ServerStyleSheets } from '@material-ui/core/styles';
 import theme from '../constants/theme';
 
-export default class MyDocument extends Document {
+class MyDocument extends Document {
   render() {
     return (
       <Html lang="en">
@@ -15,6 +15,7 @@ export default class MyDocument extends Document {
             rel="stylesheet"
             href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
           />
+          <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
         </Head>
         <body>
           <Main />
@@ -41,3 +42,5 @@ MyDocument.getInitialProps = async (ctx) => {
     styles: [...Children.toArray(initialProps.styles), sheets.getStyleElement()],
   };
 };
+
+export default MyDocument;
