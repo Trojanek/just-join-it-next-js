@@ -20,12 +20,16 @@ const getSecondaryText = (offer: Offer): string => {
 
 const OffersList = ({ offers }: OffersListProps) => (
   <>
-    <Typography variant="body1">
+    <Typography variant="body1" paragraph>
       {`Showing ${MAX_OFFERS} out of ${offers.length} offers`}
     </Typography>
     <List>
       {offers.splice(0, MAX_OFFERS).map((offer) => (
-        <ListItem key={offer.id}>
+        <ListItem
+          key={offer.id}
+          divider
+          disableGutters
+        >
           <ListItemText
             primary={offer.title}
             secondary={(
